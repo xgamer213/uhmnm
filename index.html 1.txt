@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry piddu fatima</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px;
+        }
+
+        main {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ff6f61;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .response-buttons {
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button.decline {
+            background-color: #e74c3c;
+        }
+
+        .button:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+
+        /* For response message styling */
+        .response-message {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .accepted {
+            color: #4CAF50;
+        }
+
+        .declined {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>I'm Sorry</h1>
+</header>
+
+<main>
+    <h2>Hi Fatima,</h2>
+    <p>
+        I know that I hurt you and made a mistake, and I am truly sorry for my actions. I value our friendship more than anything, and I never meant to cause you pain.
+    </p>
+    <p>
+        Please forgive me for what happened. I promise to be better and make it up to you. Our friendship means the world to me, and I hope we can move forward together.
+    </p>
+
+    <div class="response-buttons">
+        <button class="button" onclick="acceptApology()">I Accept Your Apology</button>
+        <button class="button decline" onclick="declineApology()">I Can't Accept Your Apology</button>
+    </div>
+
+    <p id="responseMessage" class="response-message"></p>
+</main>
+
+<footer>
+    <p>&copy; 2025 Apology Website | Created with care</p>
+</footer>
+
+<script>
+    function acceptApology() {
+        // Display message if the apology is accepted
+        document.getElementById('responseMessage').innerText = "Yay! I knew you'd accept! Thank you so much!";
+        document.getElementById('responseMessage').classList.add("accepted");
+        document.getElementById('responseMessage').classList.remove("declined");
+    }
+
+    function declineApology() {
+        // Display message if the apology is declined
+        document.getElementById('responseMessage').innerText = "Oh no! I completely understand. I'm really sorry, and I respect your decision!";
+        document.getElementById('responseMessage').classList.add("declined");
+        document.getElementById('responseMessage').classList.remove("accepted");
+    }
+</script>
+
+</body>
+</html>
+
